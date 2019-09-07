@@ -7,13 +7,23 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
+  if (message.author.bot) return;
+  // This is where we'll put our code.
+  if (message.content.indexOf(config.prefix) !== 0) return;
+ 
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
     if(command === 'ping') {
         message.channel.send('Pong!');
     } else
     if (command === 'blah') {
         message.channel.send('Meh.');
-    }
+    } else
+    if (command === "asl") {
+        let age = args[0]; // Remember arrays are 0-based!.
+        let sex = args[1];
+        let location = args[2];
+    message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
+}
 });
 client.login(process.env.BOT_TOKEN)
