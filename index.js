@@ -1,13 +1,19 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix ='!';
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-       message.reply('pong');
-       }
+    if(command === 'ping') {
+        message.channel.send('Pong!');
+    } else
+    if (command === 'blah') {
+        message.channel.send('Meh.');
+    }
 });
 client.login(process.env.BOT_TOKEN)
