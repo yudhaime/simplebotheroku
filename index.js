@@ -9,7 +9,7 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.author.bot) return;
  
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const args = message.content.slice(prefix.length).trim().split('%%');
   const command = args.shift().toLowerCase();
     if(command === 'ping') {
         message.channel.send('Pong!');
