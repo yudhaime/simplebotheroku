@@ -5,7 +5,7 @@ const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
 client.on('ready', () => {
-    console.log('Siap Bro!');
+    console.log('Siap Bro!!!');
 });
 
 client.on('message', message => {
