@@ -9,7 +9,7 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.author.bot) return;
  
-  const args = message.content.slice(prefix.length).split('%');
+  const args = message.content.slice(prefix.length).trim().split('%');
   const command = args.shift().toLowerCase();
   const umumkan = client.channels.get("id", "620055202438840330")
     if(command === 'ping') {
@@ -18,7 +18,7 @@ client.on('message', message => {
     if (command === 'blah') {
         message.channel.send('Meh.');
     } else
-    if (command === "asl ") {
+    if (command === "asl") {
         let age = args[0]; // Remember arrays are 0-based!.
         let sex = args[1];
         let location = args[2];
