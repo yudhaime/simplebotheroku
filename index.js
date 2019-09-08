@@ -17,9 +17,10 @@ client.on('message', message => {
         message.channel.send('Pong!');
     } else
     if (message.content.includes('https')) {
-        if(message.author.id !== process.env.OWNER_ID) return;
+        if(message.author.id === process.env.OWNER_ID){
         pemberitahuan.send('message.content');
         message.reply(`Pesan terkirim`);
+        } else return
     } else
     if (command === "asl") {
         let text = args[0]; // Remember arrays are 0-based!.
