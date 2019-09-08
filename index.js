@@ -17,7 +17,7 @@ client.on('message', message => {
         message.channel.send('Pong!');
     } else
     if (message.content.includes('https')) {
-        if(message.author.id !== process.env.BOT_TOKEN) return;
+        if(message.author.id !== process.env.OWNER_ID) return;
         pemberitahuan.send('message.content');
         message.reply(`Pesan terkirim`);
     } else
