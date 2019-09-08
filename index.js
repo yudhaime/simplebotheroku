@@ -11,7 +11,7 @@ client.on('message', message => {
  
   const args = message.content.slice(prefix.length).trim().split('%');
   const command = args.shift().toLowerCase();
-  const umumkan = client.channels.get("id", "620055202438840330")
+  const umumkan = client.channels.get("620055202438840330")
     if(command === 'ping') {
         message.channel.send('Pong!');
     } else
@@ -22,8 +22,8 @@ client.on('message', message => {
         let age = args[0]; // Remember arrays are 0-based!.
         let sex = args[1];
         let location = args[2];
-    umumkan.send(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
-    message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
+        umumkan.send("<your message content here>");
+        message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
 }
 });
 client.login(process.env.BOT_TOKEN)
