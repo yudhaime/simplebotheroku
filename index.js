@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix ='%';
+const prefix ='&';
 
 client.on('ready', () => {
     console.log('Siap Bro!!!');
@@ -9,7 +9,7 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.author.bot) return;
  
-  const args = message.content.slice(prefix.length).trim().split("\");
+  const args = message.content.slice(prefix.length).trim().split("%");
   const command = args.shift().toLowerCase();
     if(command === 'ping') {
         message.channel.send('Pong!');
