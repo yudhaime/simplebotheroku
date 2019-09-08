@@ -11,7 +11,7 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split('%');
   const command = args.shift().toLowerCase();
   const umumkan = client.channels.get("620055202438840330")
-  const pemberitahuan = client.channels.get("620065334526738434")
+  const pemberitahuan = client.channels.get("618711143011188746")
     if(command === 'ping') {
         message.channel.send('Pong!');
     } else
