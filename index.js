@@ -16,7 +16,7 @@ client.on('message', message => {
     if(command === 'ping') {
         message.channel.send('Pong!');
     } else
-    if (message.content.includes('https://')) {
+    if (message.content.includes('https')) {
         if(message.author.id !== process.env.BOT_TOKEN) return;
         pemberitahuan.send('message.content');
         message.reply(`Pesan terkirim`);
