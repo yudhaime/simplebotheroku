@@ -18,7 +18,7 @@ client.on('message', message => {
     } else
     if (message.content.includes('https')) {
         if(message.author.id === process.env.OWNER_ID){
-        pemberitahuan.send('message.content');
+        pemberitahuan.send(message.content);
         message.reply(`Pesan terkirim`);
         } else return
     } else
