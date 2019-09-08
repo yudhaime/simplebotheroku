@@ -19,11 +19,11 @@ client.on('message', message => {
         message.channel.send('Meh.');
     } else
     if (command === "asl") {
-        let age = args[0]; // Remember arrays are 0-based!.
-        let sex = args[1];
+        let text = args[0]; // Remember arrays are 0-based!.
+        let url = args[1];
         let location = args[2];
-        umumkan.send("<your message content here>");
-        message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
+        umumkan.send(`${text} langsung aja ke ${url}` );
+        message.reply(`Pesan terkirim`);
 }
 });
 client.login(process.env.BOT_TOKEN)
