@@ -12,11 +12,14 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split('%');
   const command = args.shift().toLowerCase();
   const umumkan = client.channels.get("620055202438840330")
+  const pemberitahuan = client.channels.get("620055202438840330", "618711143011188746")
     if(command === 'ping') {
         message.channel.send('Pong!');
     } else
-    if (command === 'blah') {
-        message.channel.send('Meh.');
+    if (if (message.content.includes('https://')) {
+        if(message.author.id !== process.env.BOT_TOKEN) return;
+        pemberitahuan.send('message.content');
+        message.reply(`Pesan terkirim`);
     } else
     if (command === "asl") {
         let text = args[0]; // Remember arrays are 0-based!.
