@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix ='&';
-
+//test
 client.on('ready', () => {
     console.log('Siap Bro!!!');
 });
